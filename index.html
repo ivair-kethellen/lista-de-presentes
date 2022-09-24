@@ -54,7 +54,8 @@
             text-align: center;
         }
         img{
-            width:150px;
+            width:170px;
+            height: 190px;
         }
         #espaco{
             height: 72px;
@@ -82,14 +83,15 @@
         p{
             margin: 50px;
             text-align: justify;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
         }
         figure{
+            margin:18px auto;
             text-align: center;
-            width:220px;
-            height: 230px;
+            width:215px;
+            height: 280px;
             background-color: rgb(207, 204, 204);
-            display: inline-block;
+           
         }
         .ativo{
             font-size: 0.7rem;
@@ -98,6 +100,12 @@
             text-decoration:none;
             color:white;
             
+        }
+        #text{
+            
+            margin-top: -7px;
+            margin-bottom: 15px;
+            font-size:12px;
         }
     </style>
 </head>
@@ -112,16 +120,20 @@
         </div>
         
         <p>AQUI VOCÊS PODERÃO ENCONTRAR NOSSA LISTA DE PRESENTES. OBRIGADO PELOS MIMOS!</p>
-        <h2>Lista de Presentes Padrinhos</h2>
+        <h2>Lista de Presentes <br>Padrinhos</h2>
         <div>
             <figure>
                 <figcaption>Armário</figcaption>
                 <img src="img/armario.jpg" alt="armário">
-                <a href="#" class="ativo">presentear</a>
+                <figcaption id="text">Imagem Ilustrativa</figcaption>
+                <a href="https://api.whatsapp.com/send?phone=5514991367741&text=Eu%20gostaria%20de%20presentear%20voc%C3%AAs%20com%20um%20arm%C3%A1rio!" 
+                class="ativo">presentear</a>
+                
             </figure>
             <figure>
                 <figcaption>Cama</figcaption>
                 <img src="img/cama.jpg" alt="cama">
+                
             </figure>
             <figure>
                 <figcaption>Fogão</figcaption>
