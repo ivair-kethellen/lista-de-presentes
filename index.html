@@ -54,7 +54,7 @@
             text-align: center;
         }
         img{
-            width:270px;
+            width:265px;
             height: 300px;
         }
         #espaco{
@@ -86,9 +86,10 @@
             font-size: 1.1rem;
         }
         figure{
+            padding-top: 5px;
             margin:18px auto;
             text-align: center;
-            width:300px;
+            width:290px;
             height: 390px;
             background-color: rgb(207, 204, 204);
            
@@ -107,7 +108,26 @@
             margin-bottom: 15px;
             font-size:12px;
         }
+        #topo{
+            text-decoration:none;
+            color:black;
+            
+
+        }
+        footer{
+            text-align: center;
+        }
     </style>
+    <script>
+        function copiar(){
+            let qrcode= document.getElementById('qrcode');
+            qrcode.select();
+            qrcode.setSelectionRange(0, 99999);
+            alert('Copiado com Sucesso!')
+            document.execCommand("copy");
+            
+        }
+    </script>
 </head>
 <body>
     <header >
@@ -127,7 +147,7 @@
                 <img src="img/armario.jpg" alt="armário">
                 <figcaption id="text">Imagem Ilustrativa</figcaption>
                 <a href="https://api.whatsapp.com/send?phone=5514991367741&text=Eu%20gostaria%20de%20presentear%20voc%C3%AAs%20com%20um%20arm%C3%A1rio!" 
-                class="ativo" target="_blank">presentear</a>
+                class="ativo">presentear</a>
                 
             </figure>
             <figure>
@@ -157,14 +177,21 @@
             </figure>
         </div>
         <div>
-            <p>Querido padrinhos, caso queira nos agraciar com algum presente em dinheiro deixamos algumas opções para tranferência.</p>
-
-        </div>
-        <a href="#menu">VOLTAR AO TOPO</a>
+            <p>QUERIDO PADRINHOS, CASO QUEIRA NOS AGRACIAR COM ALGUM PRESENTE EM <strong>DINHEIRO</strong> DEIXAMOS ALGUMAS OPÇÕES PARA TRANSFERÊNCIA.</p>
+            <h3> Via QRCode</h3>
+            <h4>Aponte a câmera do seu celular</h4>
+            <img src="img/qrcode.jpeg" alt="qrcode" style="width: 500px; height:500px;"><br>
+            <label for="qrcode">Você também pode copiar e colar o código PIX:</label><br>
+            <input type="text" name="qrcode" id="qrcode" value="00020101021126360014br.gov.bcb.pix0114+55149913677415204000053039865802BR5925Ivair Quirino Dos Santos 6010Areiopolis62070503***6304D1FD" readonly="true" title="Copiar" >
+            <input type="button" value="Copiar"  onclick="copiar()">
+            <h3>Conta para Transferência:</h3>
+            <p><span>Santander S/A</span><br>Agência: 0055<br>Conta Corrente: 01036947-8<br>Favorecido: Ivair Quirino dos Santos Filho<br>
+            CPF: 459.013.448-98</p>
+        </div>    
     </section>
-    
+
     <footer>
-        <p></p>
+        <a href="#" id="topo">VOLTAR AO TOPO</a>
     </footer>
 </body>
 </html>
