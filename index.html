@@ -68,8 +68,10 @@
             justify-content: center;
             background-repeat: no-repeat;
             width:100%;
+            height: 280px;
             margin:0 auto;
             background-size: cover;
+           
             background-image:url(img/flores.jpg);
         }
         .capa h1{
@@ -80,7 +82,7 @@
             font-weight: normal;
             
         }
-        p{ 
+        #intro{
             margin: 50px;
             text-align: justify;
             font-size: 1.1rem;
@@ -94,7 +96,7 @@
             background-color: rgb(207, 204, 204);
            
         }
-        .ativo{
+        .link{
             font-size: 0.7rem;
             padding: 7px 25px;
             background-color: black;
@@ -102,11 +104,15 @@
             color:white;
             
         }
+        .desativado{
+            color:red;
+            background-color: black;
+        }
         #text{
             
             margin-top: -7px;
             margin-bottom: 15px;
-            font-size:12px;
+            font-size:10px;
         }
         #topo{
             text-decoration:none;
@@ -116,6 +122,25 @@
         }
         footer{
             text-align: center;
+        }
+        .dinheiro{
+            text-align: center;
+        }
+        #pagamento h3{
+            margin-bottom:0px;
+        }
+        #pagamento p{
+            margin-top: 5px;
+        }
+        #pagamento{
+            padding-left: 10px;
+        }
+        #code{
+            width:200px;
+        }
+        span{
+            font-weight: bold;
+            color:rgb(0, 89, 255);
         }
     </style>
     <script>
@@ -139,29 +164,40 @@
             <h1>Ivair <br>& Kethellen</h1>
         </div>
         
-        <p>AQUI VOCÊS PODERÃO ENCONTRAR NOSSA LISTA DE PRESENTES. OBRIGADO PELOS MIMOS!</p>
+        <p id="intro">AQUI VOCÊS PODERÃO ENCONTRAR NOSSA LISTA DE PRESENTES. OBRIGADO PELOS MIMOS!</p>
         <h2>Lista de Presentes <br>Padrinhos</h2>
         <div>
             <figure>
                 <figcaption>Armário</figcaption>
                 <img src="img/armario.jpg" alt="armário">
-                <figcaption id="text">Imagem Ilustrativa</figcaption>
-                <a href="https://api.whatsapp.com/send?phone=5514991367741&text=Eu%20gostaria%20de%20presentear%20voc%C3%AAs%20com%20um%20arm%C3%A1rio!" 
-                class="ativo">presentear</a>
+                <figcaption id="text">*Imagem Ilustrativa</figcaption>
+                <a href="https://api.whatsapp.com/send?phone=5514991367741&text=Eu%20gostaria%20de%20presentear%20voc%C3%AAs%20com%20um%20ARM%C3%81RIO!%20%20%F0%9F%A5%B0%F0%9F%99%8F%F0%9F%8F%BC"
+                class="link" target="_blank">presentear</a>
                 
             </figure>
             <figure>
                 <figcaption>Cama</figcaption>
                 <img src="img/cama.jpg" alt="cama">
+                <figcaption id="text">*Imagem Ilustrativa</figcaption>
+                <a  
+                class="link desativado" target="_blank">já presenteado</a>
                 
             </figure>
             <figure>
                 <figcaption>Fogão</figcaption>
                 <img src="img/fogao.jpg" alt="fogao">
+                <figcaption id="text">*Imagem Ilustrativa</figcaption>
+                <a  
+                class="link desativado" target="_blank">já presenteado</a>
+                
             </figure>
             <figure>
                 <figcaption>Geladeira</figcaption>
                 <img src="img/geladeira.jpg" alt="geladeira">
+                <figcaption id="text">*Imagem Ilustrativa</figcaption>
+                <a  
+                class="link desativado" target="_blank">já presenteado</a>
+                
             </figure>
             <figure>
                 <figcaption>Guarda Roupa</figcaption>
@@ -172,25 +208,31 @@
                 <img src="img/maquina-de-lavar-roupa.jpg" alt="maquina-de-lavar">
             </figure>
             <figure>
+                <figcaption>Microondas Inox</figcaption>
+                <img src="img/microondas.jpg" alt="microondas">
+            </figure>
+            <figure>
                 <figcaption>Sofá</figcaption>
                 <img src="img/sofa.jpg" alt="sofa">
             </figure>
         </div>
-        <div>
-            <p>QUERIDO PADRINHOS, CASO QUEIRA NOS AGRACIAR COM ALGUM PRESENTE EM <strong>DINHEIRO</strong> DEIXAMOS ALGUMAS OPÇÕES PARA TRANSFERÊNCIA.</p>
+        <div id="pagamento">
+            <p class="dinheiro">QUERIDOS PADRINHOS, CASO QUEIRA NOS AGRACIAR COM ALGUM PRESENTE EM <span>DINHEIRO</span> DEIXAMOS ALGUMAS OPÇÕES PARA TRANSFERÊNCIA.</p>
+            <h3>Chave Pix Celular:</h3>
+            <p><span>(14)99136-7741</span></p><br>
             <h3> Via QRCode</h3>
             <h4>Aponte a câmera do seu celular</h4>
-            <img src="img/qrcode.jpeg" alt="qrcode" style="width: 500px; height:500px;"><br>
+            <img src="img/qrcode.jpeg" alt="qrcode" style="width: 300px; height:300px;" ><br>
             <label for="qrcode">Você também pode copiar e colar o código PIX:</label><br>
             <input type="text" name="qrcode" id="qrcode" value="00020101021126360014br.gov.bcb.pix0114+55149913677415204000053039865802BR5925Ivair Quirino Dos Santos 6010Areiopolis62070503***6304D1FD" readonly="true" title="Copiar" >
             <input type="button" value="Copiar"  onclick="copiar()">
             <h3>Conta para Transferência:</h3>
             <p><span>Santander S/A</span><br>Agência: 0055<br>Conta Corrente: 01036947-8<br>Favorecido: Ivair Quirino dos Santos Filho<br>
-            CPF: 459.013.448-98</p>
+           </p>
         </div>    
     </section>
 
-    <footer>
+    <footer style="margin-top:60px">
         <a href="#" id="topo">VOLTAR AO TOPO</a>
     </footer>
 </body>
