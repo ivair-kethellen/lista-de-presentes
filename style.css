@@ -111,7 +111,7 @@ figure{
 }
 .link{
     font-size: 0.7rem;
-    trasform:uppercase;
+    text-trasform:uppercase;
     text-decoration:none;
     color:white;
     
